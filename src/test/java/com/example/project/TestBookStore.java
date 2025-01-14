@@ -111,7 +111,8 @@ public class TestBookStore {
         Book b3 = new Book("1984", "George Orwell", 1949, "978-0451524935", 5);
         Book b4 = new Book("Brave New World", "Aldous Huxley", 1932, "978-0060850524", 3);
         Book b5 = new Book("Test","Author",1900, "1234", 1);
-        store.addBook(b1);store.addBook(b4);
+        store.addBook(b1);
+        store.addBook(b4);
         store.insertBook(b2, 1);
         store.insertBook(b3,2);
         store.insertBook(b5,4);
