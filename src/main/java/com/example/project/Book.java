@@ -55,8 +55,13 @@ public class Book {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
+    // Uniform output
     public String bookInfo() {
         return "Title: " + title + ", Author: " + author + ", Year: " + yearPublished + ", ISBN: " + isbn + ", Quantity: " + quantity + "";
+    }
+    // https://stackoverflow.com/questions/10734106/how-to-override-tostring-properly-in-java (For GUI)
+    @Override
+    public String toString() {
+        return title + ", " + author;
     }
 }

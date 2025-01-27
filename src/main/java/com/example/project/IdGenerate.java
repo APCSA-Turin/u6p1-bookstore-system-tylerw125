@@ -12,6 +12,11 @@ public class IdGenerate {
         return String.valueOf(currentId);
     }
 
+    public static int setCurrentId(int newId) {
+        return currentId = newId;
+    }
+
+
     // Reset the ID back to 99
     public static void reset() {
         currentId = 99;

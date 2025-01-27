@@ -35,18 +35,20 @@ public class User {
     public void setBooks(Book[] books) {
         this.books = books;
     }
-
+    // Uniform output (For GUI)
     public String bookListInfo() {
-        StringBuilder info = new StringBuilder();
-        for (Book book : books) {
-            if (book != null) {
-                info.append(book.bookInfo()).append("\n");
+        String bookList = "";
+        for (int i = 0; i < books.length; i++) {
+            if (books[i] != null) {
+                bookList += "\n" + books[i].bookInfo();
+            } else {
+                bookList += "\nempty";
             }
         }
-        return info.length() > 0 ? info.toString() : "empty";
+        return bookList;
     }
 
     public String userInfo() {
-        return "Name: " + name + "\nId: " + id + "\nBooks:\n" + bookListInfo();
+        return "Name: " + name + "\nId: " + id + "\nBooks: " + bookListInfo() + "\n";
     }
 }

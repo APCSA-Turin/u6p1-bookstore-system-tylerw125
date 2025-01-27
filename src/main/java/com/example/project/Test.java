@@ -9,10 +9,26 @@ public class Test {
         Book b4 = new Book("Brave New World", "Aldous Huxley", 1932, "978-0060850524", 3);
         Book b5 = new Book("Test","Author",1900, "1234", 1);
         store.addBook(b1);
+        store.addBook(b2);
+        store.addBook(b3);
         store.addBook(b4);
-        store.insertBook(b2, 1);
-        store.insertBook(b3,2);
-        store.insertBook(b5,4);
+        store.addBook(b5);
+        System.out.println(store.bookStoreBookInfo());
+        store.removeBook(b1);
+        store.removeBook(b1);
+        System.out.println(store.bookStoreBookInfo());
+        store.removeBook(b1); //b1 should be removed. testing consolidation
+        store.removeBook(b5);
+        System.out.println(store.bookStoreBookInfo());
+        store.removeBook(b3);
+        System.out.println(store.bookStoreBookInfo());
+        store.removeBook(b3);
+        System.out.println(store.bookStoreBookInfo());
+        store.removeBook(b3);
+        System.out.println(store.bookStoreBookInfo());
+        store.removeBook(b3);
+        System.out.println(store.bookStoreBookInfo());
+        store.removeBook(b3);
         System.out.println(store.bookStoreBookInfo());
     }
 }
